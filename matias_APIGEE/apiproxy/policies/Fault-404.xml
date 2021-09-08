@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="Fault-404">
+    <DisplayName>Fault-404 : Assign Message</DisplayName>
+    <Properties/>
+    <Set>
+        <Payload contentType="application/json">{"msg":"object not found"}</Payload>
+        <StatusCode>404</StatusCode>
+        <ReasonPhrase>Not Found</ReasonPhrase>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

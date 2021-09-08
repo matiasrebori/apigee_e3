@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="8" name="matias_e3">
+    <Basepaths>/edge_entrenamiento_especializado</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1628618447534</CreatedAt>
+    <CreatedBy>santiago.tortora@edge.com.py</CreatedBy>
+    <Description>Proxy para práctica de Maias Rebori</Description>
+    <DisplayName>matias_e3</DisplayName>
+    <LastModifiedAt>1629152806437</LastModifiedAt>
+    <LastModifiedBy>martinezrebori@gmail.com</LastModifiedBy>
+    <ManifestVersion>SHA-512:86630a87a69913757828cc64a16caef3590c54dfec0cb85b0be2ef5a4f744ba00db801c60778b32026aa96d369cb209ec95f771aede2ef9d9475d68b6c3afc54:us-east-1</ManifestVersion>
+    <Policies>
+        <Policy>Check-Existence</Policy>
+        <Policy>Create-Task--Assign-Message</Policy>
+        <Policy>Delete-Task--Extract-Variables</Policy>
+        <Policy>Delete-Task--Prepare-Request</Policy>
+        <Policy>Disable-Path-Suffix</Policy>
+        <Policy>Fault-404</Policy>
+        <Policy>Get-All-Tasks--Prepare-Request</Policy>
+        <Policy>Get-Task-By-ID-Extract-Variables</Policy>
+        <Policy>Get-Task-By-ID-Prepare-Request</Policy>
+        <Policy>ParseJsonResponse</Policy>
+        <Policy>Raise-404-from-Callback</Policy>
+        <Policy>Update-Task--Extract-Variables</Policy>
+        <Policy>Update-Task--Prepare-Request</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources/>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>

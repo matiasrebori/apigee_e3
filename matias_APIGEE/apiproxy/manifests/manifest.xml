@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Manifest name="manifest">
+    <Policies>
+        <VersionInfo resourceName="Check-Existence" version="SHA-512:ece7f90b894308c30e39751eff7e55d24c7fba2dabddb63a6f3d1844a45dfbf669d4b7cbf7b1cfe645a97bb40070530024e91241b66c9671f2dbe5e1c477f1bb"/>
+        <VersionInfo resourceName="Create-Task--Assign-Message" version="SHA-512:5b10a5fa7f092a37ad147cea4354faca0baef1eb0d0d836db555af50b1482d31cd018f2d0c01ec615a2a69305de79ebd1e5ab2593d2dec738652f8333f4e6ec3"/>
+        <VersionInfo resourceName="Delete-Task--Extract-Variables" version="SHA-512:855f630da803b50fbf6933ac6eb106dd70cf6e0b45296c1cf8e1e2cebfec590d36bfdf7b966709bbcbc2666737a7efa5ddd4436fca1b9f6d43c7800232a8ff67"/>
+        <VersionInfo resourceName="Delete-Task--Prepare-Request" version="SHA-512:87db046eaaf3bf64cc2b6231f686cec7f55bb78115f827f167dacb187e439ccbbdabd33c23058ed70fe0b42477f13d52a39d1ee903384a9640f1503ba1479835"/>
+        <VersionInfo resourceName="Disable-Path-Suffix" version="SHA-512:a960134124c4522d47b0646bc59eba63dba8956a2871a2bb711554a8a962b049eea0a9f5f990784ec52f584d373e79a8ee619668c6ddc4ddb7a895c158f52d89"/>
+        <VersionInfo resourceName="Fault-404" version="SHA-512:3af41ecd4d499d4d3ef6deaa0ca28eb323fff7d54f408e9eec78dc2535fbd57acae0d3209f5caa1ef9720af7bdad675279dbd5c152cecf1fb0a4a382bb629734"/>
+        <VersionInfo resourceName="Get-All-Tasks--Prepare-Request" version="SHA-512:47eb7c8a181a02da02dec9e6c8a00d2ec3de86555841d866598f1aea9f6eeaaa7c54e583c898189f47e25f64502eb08d948847077e8546f1562e0310fb2d6607"/>
+        <VersionInfo resourceName="Get-Task-By-ID-Extract-Variables" version="SHA-512:336dd81b101caff2c77bd95eed7325ed77b65066dc2c80b0e4a087dde025befbc53b384f6da1381d3636c84f6631d6f2e27329a99629da8ec183718c47085be9"/>
+        <VersionInfo resourceName="Get-Task-By-ID-Prepare-Request" version="SHA-512:e80e33721d631c64f265ff62c1c4455a30944db95672e108f800c500923c0df58493468d049d21b268f02f2071f07e1b9c71e4e09d0fecc2376271b7e90120ee"/>
+        <VersionInfo resourceName="ParseJsonResponse" version="SHA-512:ab53e1b30835b680a2ed4aa25185d66ad128899fb981234bdeb652fc9745844512e7f3e7ac4cdfd9ede11eba2553a06cf49698fea325891e6b961cd5a9b412cd"/>
+        <VersionInfo resourceName="Raise-404-from-Callback" version="SHA-512:ca223c030929b801eaf9cae91cf9feb28ffb9d80b9b396a29486f76a876121296b37a04772e842546265285b566e92a1c850d95caca0624121345b164adecb91"/>
+        <VersionInfo resourceName="Update-Task--Extract-Variables" version="SHA-512:d9b1a2e1f6edae6ee8e5a101e448ccc707b2381f09decbf2a333874d39bb82823e0362e18ef198f68307d02363f761c853760d10149f2c5a714f12f95825d5df"/>
+        <VersionInfo resourceName="Update-Task--Prepare-Request" version="SHA-512:34f8f15b6976a423db4a87be41e8b29910eaa05d616287006c58a2aa087ee9a71cacef4b50ffeb953f7e8be6b1789dc17eba426300a1172b0af884689d7b4baa"/>
+    </Policies>
+    <ProxyEndpoints>
+        <VersionInfo resourceName="default" version="SHA-512:2a510cd212fd3da11fd78942e00b6c02441257985b562fde32742d08113bf51693ffe2b8da5faae18f3f182f40c9868cfe06affbc6f2450cbced91fd8f90c413"/>
+    </ProxyEndpoints>
+    <Resources/>
+    <SharedFlows/>
+    <TargetEndpoints>
+        <VersionInfo resourceName="default" version="SHA-512:73d51d760285eac0313603d77e920ad95fb95350aeaa1af178c0c429be8faceb1a75485b3b055c601644dcc55cd199eabf298da2fae6e62e642478927cbe3516"/>
+    </TargetEndpoints>
+</Manifest>

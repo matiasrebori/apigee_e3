@@ -1,0 +1,234 @@
+swagger: "2.0"
+info:
+  description: "This is a sample documentation of Enrique's To-Do list API.  You can find out more about the To-Do API in [To-Do List Documentation](https://documenter.getpostman.com/view/13562320/Tzz4Pypm)."
+  version: "1.0.0"
+  title: "To-Do List API"
+  contact:
+    email: "martinezrebori@gmail.com"
+host: "todo-list-js-node.herokuapp.com"
+tags:
+- name: "tasks"
+  description: "Operations about tasks"
+schemes:
+- "https"
+paths:
+  /create:
+    post:
+      tags:
+      - "tasks"
+      summary: "Create task"
+      description: "Creates a new task"
+      operationId: "createTask"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Send the task to be created"
+        required: true
+        schema:
+          type: "object"
+          properties:
+            task: 
+              type: "string"
+              default: "tarea numero 1"
+      responses:
+        201:
+          description: "Object Created"
+          schema:
+            $ref: "#/definitions/createdTask"
+        "406":
+          description: "Invalid body supplied"
+          schema:
+            $ref: "#/definitions/errorMsg"
+  /getAll:
+    get:
+      tags:
+      - "tasks"
+      summary: "Get all tasks"
+      description: " Returns all the tasks"
+      operationId: "getAll"
+      produces:
+      - "application/json"
+      parameters: []
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/Tasks"
+  /getById:
+    get:
+      tags:
+      - "tasks"
+      summary: "Get task by id"
+      description: "Retrieve a task by id"
+      operationId: "getTaskById"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Send the id to be retrieved"
+        required: true
+        schema:
+          type: "object"
+          properties:
+            id: 
+              type: "string"
+              default: "61197beb51ad6e0015a3bab4"
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/retrievedTasks"
+        "406":
+          description: "Invalid id supplied"
+          schema:
+            $ref: "#/definitions/errorMsg"
+  /update:
+    put:
+      tags:
+      - "tasks"
+      summary: "Update task (marks as completed)"
+      description: "Update a task by task id, according to to-do list api an update operation marks a task as completed "
+      operationId: "updateUser"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Send the id of the task to be updated (mark as completed)"
+        required: true
+        schema:
+          type: "object"
+          properties:
+            id: 
+              type: "string"
+              default: "61197beb51ad6e0015a3bab4"
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            type: "object"
+            properties:
+              msg:
+                type: "string"
+                default: "Task status switched succesfully"
+  /delete:
+    delete:
+      tags:
+      - "tasks"
+      summary: "Delete task"
+      description: "Delete a user by id"
+      operationId: "deleteUser"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Send the id of the task to be deleted"
+        required: true
+        schema:
+          type: "object"
+          properties:
+            id: 
+              type: "string"
+              default: "61197beb51ad6e0015a3bab4"
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            type: "object"
+            properties:
+              msg:
+                type: "string"
+                default: "Task deleted succesfully"
+        "404":
+          description: "Task not found"
+          schema:
+            type: "object"
+            properties:
+              msg: 
+                type: "string"
+                default: "Task with id {id} not found"
+definitions:
+  task:
+    type: "object"
+    properties:
+      task:
+        type: "string"
+      id:
+        type: "string"
+  Tasks:
+    type: "object"
+    properties:
+      tasks:
+        type: "array"
+        items:
+          $ref: "#/definitions/task"
+  createdTask:
+    type: "object"
+    properties:
+      msg:
+        type: "string"
+        default: "Task created succesfully"
+      task:
+        type: "object"
+        properties:
+          msg:
+            type: "string"           
+            default: "Todo created succesfully"
+          todoCreated:
+            type: "object"
+            properties:
+              completedAt:
+                type: "string"
+                format: "date-time"
+              completed:
+                type: "boolean"
+                default: false
+              _id:
+                type: "string"
+                default: "6116a9994a2f5100152a469a"
+              task:
+                type: "string"
+                default: "Creando la tarea desde postman Matias"
+                
+  retrievedTask:
+    type: "object"
+    properties:
+      createdAt:
+        type: "string"
+        format: "date-time"
+      completed:
+        type: "boolean"
+        default: false
+      _id:
+        type: "string"
+        default: "6116a9994a2f5100152a469a"
+      task:
+        type: "string"
+        default: "Creando la tarea desde postman Matias"
+      __v:
+        type: "integer"
+      
+  retrievedTasks:
+    type: "object"
+    properties:
+      task:
+        type: "array"
+        items:
+          $ref: "#/definitions/retrievedTask"
+          
+  errorMsg:
+    type: "object"
+    properties:
+      msg:
+        type: "string"
+        default: "Hubo un error, favor verifique su peticion"
+  
+
+
+externalDocs:
+  description: "Find out more about the developer"
+  url: "https://www.linkedin.com/in/matias-martinez-a095121b2/"

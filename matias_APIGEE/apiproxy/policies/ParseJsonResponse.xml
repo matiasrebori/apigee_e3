@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables name="ParseJsonResponse">
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <VariablePrefix>json</VariablePrefix>
+    <JSONPayload>
+        <Variable name="task">
+            <JSONPath>$.task</JSONPath>
+        </Variable>
+    </JSONPayload>
+    <Source clearPayload="false">request</Source>
+    <DisplayName>Create Task : ParseJsonResponse</DisplayName>
+</ExtractVariables>
